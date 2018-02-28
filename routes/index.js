@@ -27,7 +27,6 @@ router.post('/items/create', async (req, res, next) => {
 router.get('/items/:itemid', async (req, res, next) => {
   const itemid = req.params.itemid;
   const item = await Item.findById(itemid);
-  console.log('............................', item);
-res.render('item', {item});
+  res.render('item', {item});
 });
 module.exports = router;
